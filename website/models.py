@@ -8,6 +8,7 @@ class Note(db.Model):
     data = db.Column(db.String(10000))
     date = db.Column(db.DateTime(timezone=True), default=func.now())
     
+    
 
 
 class User(db.model, UserMixin):
@@ -15,3 +16,4 @@ class User(db.model, UserMixin):
     email = db.Column(db.String(150), unique=True)
     password = db.Column(db.String(150))
     first_name = db.Column(db.string(150))
+    notes = db.relationship('Note')
