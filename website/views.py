@@ -11,7 +11,7 @@ views = Blueprint('views', __name__)
 @login_required
 def home():
     if request.method == 'POST': 
-        note = request.form.get('note')#Gets the note from the HTML 
+        note = request.form.get('note')
 
         if len(note) < 1:
             flash('Note is too short!', category='error') 
