@@ -1,9 +1,21 @@
-{% extends "base.html" %} {% block title %}Sign Up{% endblock %} {% block
-    content %}
+<!-- Extending the base template -->
+{% extends "base.html" %}
+
+<!-- Setting the title block to "Sign Up" -->
+{% block title %}Sign Up{% endblock %}
+
+<!-- Defining the content block -->
+{% block content %}
+    <!-- Sign up form -->
     <form method="POST">
+      <!-- Heading for the sign-up form -->
       <h3 align="center">Sign Up</h3>
+      
+      <!-- Form group for email input -->
       <div class="form-group">
+        <!-- Label for the email field -->
         <label for="email">Email Address</label>
+        <!-- Email input field -->
         <input
           type="email"
           class="form-control"
@@ -12,8 +24,12 @@
           placeholder="Enter email"
         />
       </div>
+      
+      <!-- Form group for first name input -->
       <div class="form-group">
+        <!-- Label for the first name field -->
         <label for="firstName">First Name</label>
+        <!-- First name input field -->
         <input
           type="text"
           class="form-control"
@@ -22,8 +38,12 @@
           placeholder="Enter first name"
         />
       </div>
+      
+      <!-- Form group for password input -->
       <div class="form-group">
+        <!-- Label for the password field -->
         <label for="password1">Password</label>
+        <!-- Password input field -->
         <input
           type="password"
           class="form-control"
@@ -32,8 +52,12 @@
           placeholder="Enter password"
         />
       </div>
+      
+      <!-- Form group for password confirmation input -->
       <div class="form-group">
+        <!-- Label for the password confirmation field -->
         <label for="password2">Password (Confirm)</label>
+        <!-- Password confirmation input field -->
         <input
           type="password"
           class="form-control"
@@ -42,8 +66,10 @@
           placeholder="Confirm password"
         />
       </div>
+      
       <br />
+      
+      <!-- Submit button for the form -->
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-    {% endblock %}
-    
+{% endblock %}

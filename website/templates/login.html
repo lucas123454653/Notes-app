@@ -1,9 +1,21 @@
-{% extends "base.html" %} {% block title %}Login{% endblock %} {% block content
-    %}
+<!-- Extending the base template -->
+{% extends "base.html" %}
+
+<!-- Setting the title block to "Login" -->
+{% block title %}Login{% endblock %}
+
+<!-- Defining the content block -->
+{% block content %}
+    <!-- Login form -->
     <form method="POST">
+      <!-- Heading for the login form -->
       <h3 align="center">Login</h3>
+      
+      <!-- Form group for email input -->
       <div class="form-group">
+        <!-- Label for the email field -->
         <label for="email">Email Address</label>
+        <!-- Email input field -->
         <input
           type="email"
           class="form-control"
@@ -12,8 +24,12 @@
           placeholder="Enter email"
         />
       </div>
+      
+      <!-- Form group for password input -->
       <div class="form-group">
+        <!-- Label for the password field -->
         <label for="password">Password</label>
+        <!-- Password input field -->
         <input
           type="password"
           class="form-control"
@@ -22,8 +38,10 @@
           placeholder="Enter password"
         />
       </div>
+      
       <br />
+      
+      <!-- Submit button for the login form -->
       <button type="submit" class="btn btn-primary">Login</button>
     </form>
-    {% endblock %}
-    
+{% endblock %}

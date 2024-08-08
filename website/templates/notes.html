@@ -1,25 +1,42 @@
-{% extends "base.html" %} {% block title %}Notes{% endblock %}{% block 
-    content %}
+<!-- Extending the base template -->
+{% extends "base.html" %}
+
+<!-- Setting the title block to "Notes" -->
+{% block title %}Notes{% endblock %}
+
+<!-- Defining the content block -->
+{% block content %}
+    <!-- Heading for the notes page -->
     <h1 align="center">Notes</h1>
+
+    <!-- List group to display user notes -->
     <ul class="list-group list-group-flush" id="notes">
+      <!-- Loop through each note associated with the user -->
       {% for note in user.notes %}
       <div class="card border-dark">
-        <div class="card header bgcolor   d-flex justify-content-between align-items-center">
-        <div class="card-text">{{ note.data }}</div>
-            <button type="button" class="close" onClick="deleteNote({{ note.id }})">
-              <span aria-hidden="true">&times;</span> 
+        <!-- Card header with note content and delete button -->
+        <div class="card header bgcolor d-flex justify-content-between align-items-center">
+          <!-- Display note data -->
+          <div class="card-text">{{ note.data }}</div>
+          <!-- Delete button to remove the note -->
+          <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+            <span aria-hidden="true">&times;</span> 
           </button>
         </div>
-    </div>
-    <br/>
-    {% endfor %}
+      </div>
+      <br/>
+      {% endfor %}
     </ul>
+
+    <!-- Form to add a new note -->
     <form method="POST">
+      <!-- Textarea for the note content -->
       <textarea name="note" id="note" class="form-control"></textarea>
       <br />
+      <!-- Centered submit button to add the note -->
       <div align="center">
         <button type="submit" class="btn btn-primary">Add Note</button>
       </div>
     </form>
-<br/>
-    {% endblock %}
+    <br/>
+{% endblock %}

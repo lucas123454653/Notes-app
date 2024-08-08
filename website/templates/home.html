@@ -1,55 +1,73 @@
-{% extends "base.html" %}{% block title %}Home{% endblock %}
+<!-- Extending the base template -->
+{% extends "base.html" %}
+
+<!-- Setting the title block to "Home" -->
+{% block title %}Home{% endblock %}
+
+<!-- Defining the content block -->
 {% block content %}
  <!-- Content section 1-->
  <section id="scroll">
     <div class="container px-5">
         <div class="row gx-5 align-items-center">
+            <!-- Image on the right for larger screens -->
             <div class="col-lg-6 order-lg-2">
-                <div class="p-5"><img class="img-fluid rounded-circle" src="static/assets/img/01.jpg" alt="..." /></div>
+                <div class="p-5">
+                    <img class="img-fluid rounded-circle" src="static/assets/img/01.jpg" alt="..." />
+                </div>
             </div>
+            <!-- Text content on the left for larger screens -->
             <div class="col-lg-6 order-lg-1">
                 <div class="p-5">
                     <h2 class="display-4">Welcome to NoteBuddy...</h2>
                     <p>
-                        Welcome to NoteBuddy! This app helps you take and organize notes for school. Whether you're in class or studying at home, NoteBuddy makes it easy to keep track of everything. Start using NoteBuddy today to stay on top of your schoolwork! </p>
+                        Welcome to NoteBuddy! This app helps you take and organize notes for school. Whether you're in class or studying at home, NoteBuddy makes it easy to keep track of everything. Start using NoteBuddy today to stay on top of your schoolwork!
+                    </p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 <!-- Content section 2-->
 <section>
     <div class="container px-5">
         <div class="row gx-5 align-items-center">
+            <!-- Image on the left for larger screens -->
             <div class="col-lg-6">
-                <div class="p-5"><img class="img-fluid rounded-circle" src="static/assets/img/02.jpg" alt="..." /></div>
+                <div class="p-5">
+                    <img class="img-fluid rounded-circle" src="static/assets/img/02.jpg" alt="..." />
+                </div>
             </div>
+            <!-- Text content on the right for larger screens -->
             <div class="col-lg-6">
                 <div class="p-5">
                     <h2 class="display-4">Tutorial.</h2>
-                    <p>All you need to do is sign up or log in, and you're all set! make sure you logout after you've finished.</p>
+                    <p>All you need to do is sign up or log in, and you're all set! Make sure you log out after you've finished.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 <!-- Content section 3-->
 <section>
     <div class="container px-5">
         <div class="row gx-5 align-items-center">
+            <!-- Image on the right for larger screens -->
             <div class="col-lg-6 order-lg-2">
-                <div class="p-5"><img class="img-fluid rounded-circle" src="static/assets/img/03.jpg" alt="..." /></div>
+                <div class="p-5">
+                    <img class="img-fluid rounded-circle" src="static/assets/img/03.jpg" alt="..." />
+                </div>
             </div>
+            <!-- Text content on the left for larger screens -->
             <div class="col-lg-6 order-lg-1">
                 <div class="p-5">
                     <h2 class="display-4">You're all set!</h2>
-                    <p>All your notes saved so you don't need to worry about it getting deleted, enjoy NoteBuddy! </p>
+                    <p>All your notes are saved so you don't need to worry about them getting deleted. Enjoy NoteBuddy!</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 {% endblock %}
-
-
-

@@ -1,11 +1,14 @@
-.bgcolor{
+/* Style for elements with the 'bgcolor' class */
+.bgcolor {
+    /* Set background color to a light beige */
     background-color: rgb(255, 255, 240);
+
+    /* Apply a set of fallback font families for text */
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-
 }
+
+/* Style for the entire body of the document */
 body {
-background-color: rgb(255, 248, 220);
+    /* Set background color to a very light beige */
+    background-color: rgb(255, 248, 220);
 }
-
-
