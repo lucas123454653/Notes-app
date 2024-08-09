@@ -10,9 +10,7 @@ DB_NAME = "database.db"
 
 # Function: create_app
 # Purpose: Factory function to create and configure the Flask application instance.
-# Description: This function sets up the Flask application by configuring settings, 
-#              initializing extensions, and registering blueprints. It ensures the 
-#              application is created with all necessary components for running a web service.
+# Description: This function sets up the Flask application by configuring settings, initializing extensions, and registering blueprints. It ensures the  application is created with all necessary components for running a web service.
 # Returns: A Flask application instance configured and ready to be run.
 
 def create_app():
@@ -47,5 +45,4 @@ def create_app():
 
     return app  # Return the configured app instance
 
-# Function: create_database
-# Purpose:
+

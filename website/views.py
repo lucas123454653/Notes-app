@@ -6,17 +6,14 @@ import json
 
 # Function: Blueprint
 # Purpose: Create a Blueprint instance for organizing related routes.
-# Description: Blueprints help to organize and group routes in a Flask application.
-#              This Blueprint is named "views" and is used to register routes related 
-#              to the application's views.
+# Description: Blueprints help to organize and group routes in a Flask application. This Blueprint is named "views" and is used to register routes related to the application's views.
 # Returns: A Blueprint instance.
 
 views = Blueprint("views", __name__)
 
 # Function: home
 # Purpose: Render the home page.
-# Description: This route renders the home page template and passes the current user 
-#              to the template for context.
+# Description: This route renders the home page template and passes the current user   to the template for context.
 # Returns: Renders the "home.html" template.
 
 @views.route("/", )
@@ -26,11 +23,8 @@ def home():
 
 # Function: notes
 # Purpose: Handle displaying and adding notes.
-# Description: This route handles GET and POST requests. On GET request, it renders 
-#              the "notes.html" template. On POST request, it processes form data to 
-#              add a new note to the database if the note is valid.
-# Returns: Renders the "notes.html" template on GET request, and processes the form data 
-#          and adds a new note on POST request.
+# Description: This route handles GET and POST requests. On GET request, it renders the "notes.html" template. On POST request, it processes form data to add a new note to the database if the note is valid.
+# Returns: Renders the "notes.html" template on GET request, and processes the form data and adds a new note on POST request.
 
 @views.route("/notes", methods=['GET', 'POST'])
 def notes():
@@ -48,9 +42,7 @@ def notes():
 
 # Function: delete_note
 # Purpose: Handle deleting a note.
-# Description: This route handles POST requests to delete a note. It receives note data 
-#              in JSON format, retrieves the note from the database, and deletes it if the 
-#              current user is the owner.
+# Description: This route handles POST requests to delete a note. It receives note data in JSON format, retrieves the note from the database, and deletes it if the current user is the owner.
 # Returns: A JSON response indicating the deletion status.
 
 @views.route('/delete-note', methods=['POST'])
@@ -68,5 +60,4 @@ def delete_note():
 # Class: Note
 # Description: This represents a database model for storing notes.
 # Details: The Note class likely has fields for the note's data and the user ID of the owner.
-# Relationship: Instances of the Note class are used in the notes and delete_note functions 
-#               to interact with the database.
+# Relationship: Instances of the Note class are used in the notes and delete_note functions to interact with the database.
